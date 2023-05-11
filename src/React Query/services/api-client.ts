@@ -5,10 +5,10 @@ const axiosInstance = axios.create({
 });
 
 class APIClient<T> {
-  endpoint: string;
+  endpoint: string
 
   constructor(endpoint: string) {
-    this.endpoint = endpoint;
+    this.endpoint = endpoint
   }
   getAll = () => {
 

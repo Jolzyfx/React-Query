@@ -3,13 +3,13 @@ import usePosts from "./hooks/usePost";
 import React from "react";
 
 const PostList = () => {
-  const pageSize = 10;
+  const pageSize = 10
 
   const { data, error, isLoading, fetchNextPage, isFetchingNextPage } =
     usePosts({ pageSize });
 
   if (isLoading) return <p>Loading...</p>;
-  if (error) return <p>{error.message}</p>;
+  if (error) return <p>{error.message}</p>
 
   return (
     <div>

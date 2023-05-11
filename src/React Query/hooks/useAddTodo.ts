@@ -4,7 +4,7 @@ import { CACHE_KEY_TODOS } from "../constants";
 import todoService, { Todo } from "../services/todoService";
 
 interface AddTodoContext {
-  previousTodos: Todo[];
+  previousTodos: Todo[]
 }
 
 const useAddTodo = (onAdd: () => void) => {
