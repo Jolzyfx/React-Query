@@ -1,6 +1,5 @@
 
 import './App.css'
-import PostList from './React Query/PostList'
 import TodoForm from './React Query/TodoForm'
 import TodoList from './React Query/TodoList'
 
