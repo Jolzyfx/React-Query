@@ -1,13 +1,8 @@
-import { useReducer} from "react";
-import tasksReducer from "./reducers/tasksReducer";
-
-// interface Task {
-//   id: number;
-//   title: string;
-// }
+import { useContext } from "react";
+import TasksContext from "./contexts/tasksContext";
 
 const TaskList = () => {
-  const [tasks, dispatch] = useReducer(tasksReducer, []);
+  const { tasks, dispatch } = useContext(TasksContext);
 
   return (
     <>
@@ -31,7 +26,7 @@ const TaskList = () => {
             <span className="flex-grow-1">{task.title}</span>
             <button
               className="btn btn-outline-danger"
-              onClick={() => dispatch({type: 'DELETE', taskId: task.id})}
+              onClick={() => dispatch({ type: "DELETE", taskId: task.id })}
             >
               Delete
             </button>
